@@ -22,9 +22,7 @@ I created a map using Leaflet that plots all of the earthquakes from my data set
 
 ![2-BasicMap](Images/2-BasicMap.png)
 
-### Level 2: More Data (Optional)
-
-![5-Advanced](Images/5-Advanced.png)
+### Part 2: More Advanced Data Visualizaton
 
 The USGS wants you to plot a second data set on your map to illustrate the relationship between tectonic plates and seismic activity. You will need to pull in a second data set and visualize it along side your original set of data. Data on tectonic plates can be found at <https://github.com/fraxen/tectonicplates>.
 
@@ -35,6 +33,8 @@ In this step we are going to..
 * Add a number of base maps to choose from as well as separate out our two different data sets into overlays that can be turned on and off independently.
 
 * Add layer controls to our map.
-- - -
 
+![5-Advanced](Images/5-Advanced.png)
+
+- - -
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
