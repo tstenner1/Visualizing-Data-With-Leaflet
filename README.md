@@ -2,19 +2,13 @@
 
 In this repository I visualize earthquake data from the United States Geological Survey(USGS). 
 
-## Your Task
-
 ### Part 1: Basic Visualization
 
 My first task is to visualize an earthquake data set.
 
-1. **Get my data set**
+The USGS provides earthquake data in a number of different formats, updated every 5 minutes. I visited the [USGS GeoJSON Feed](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php) page and picked a data set to visualize.
 
-  The USGS provides earthquake data in a number of different formats, updated every 5 minutes. I visited the [USGS GeoJSON Feed](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php) page and picked a data set to visualize.
-
-   ![4-JSON](Images/4-JSON.png)
-
-2. **Import & Visualize the Data**
+After finding the dataset it was time to import and visualize the data.
 
    Create a map using Leaflet that plots all of the earthquakes from your data set based on their longitude and latitude.
 
