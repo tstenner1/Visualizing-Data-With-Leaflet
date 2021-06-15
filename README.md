@@ -4,9 +4,7 @@ In this repository I visualize earthquake data from the United States Geological
 
 ## Your Task
 
-### Level 1: Basic Visualization
-
-![2-BasicMap](Images/2-BasicMap.png)
+### Part 1: Basic Visualization
 
 Your first task is to visualize an earthquake data set.
 
@@ -33,6 +31,8 @@ Your first task is to visualize an earthquake data set.
    * Your visualization should look something like the map above.
 
 - - -
+
+![2-BasicMap](Images/2-BasicMap.png)
 
 ### Level 2: More Data (Optional)
 
