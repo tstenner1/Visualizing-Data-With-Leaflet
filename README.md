@@ -18,7 +18,7 @@ I created a map using Leaflet that plots all of the earthquakes from my data set
 
    * A legend was created to provide context for my map data.
 
-   * My visualization looka something like the map below.
+   * My visualization looks something like the map below.
 
 ![2-BasicMap](Images/2-BasicMap.png)
 
@@ -33,6 +33,8 @@ In this part I execute the following:
 * Add a number of base maps to choose from as well as separate out two different data sets into overlays that can be turned on and off independently.
 
 * Add layer controls to my map.
+
+* My visualization looks something like the map below.
 
 ![5-Advanced](Images/5-Advanced.png)
 
