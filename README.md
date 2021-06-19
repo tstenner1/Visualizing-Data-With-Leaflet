@@ -1,4 +1,4 @@
-# Leaflet Homework - Visualizing Data with Leaflet
+# Visualizing Data with Leaflet
 
 In this repository I visualize earthquake data from the United States Geological Survey(USGS). 
 
