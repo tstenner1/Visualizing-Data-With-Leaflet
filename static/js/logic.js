@@ -102,3 +102,19 @@ function createMap(earthquakes) {
       Earthquakes: earthquakes,
       FaultLines: faultLine
     };
+
+    // Create our map, giving it the streetmap and earthquakes layers to display on load
+  var myMap = L.map("map", {
+    center: [
+      37.09, -95.71
+    ],
+    zoom: 4,
+    layers: [outdoorsmap, earthquakes, faultLine]
+  });
+
+  // Create a layer control
+  // Pass in our baseMaps and overlayMaps
+  // Add the layer control to the map
+  L.control.layers(baseMaps, overlayMaps, {
+    collapsed: false
+  }).addTo(myMap);
