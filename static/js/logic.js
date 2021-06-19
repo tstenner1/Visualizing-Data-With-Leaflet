@@ -62,3 +62,43 @@ function radiusSize(magnitude) {
   // Sending our earthquakes layer to the createMap function
   createMap(earthquakes);
 }
+
+function createMap(earthquakes) {
+
+    // Define outdoormap, satellitemap, and grayscalemap layers
+    var outdoorsmap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+      attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+      maxZoom: 18,
+      id: "mapbox.outdoors",
+      accessToken: API_KEY
+    });
+  
+    var satellitemap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+      attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+      maxZoom: 18,
+      id: "mapbox.satellite",
+      accessToken: API_KEY
+    });
+  
+    var grayscalemap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+      attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+      maxZoom: 18,
+      id: "mapbox.light",
+      accessToken: API_KEY
+    });
+  
+    // Create the faultline layer
+    var faultLine = new L.LayerGroup();
+    
+    // Define a baseMaps object to hold our base layers
+    var baseMaps = {
+      "Outdoor Map": outdoorsmap,
+      "Greyscale Map": grayscalemap,
+      "Satellite Map": satellitemap
+    };
+  
+    // Create overlay object to hold our overlay layer
+    var overlayMaps = {
+      Earthquakes: earthquakes,
+      FaultLines: faultLine
+    };
