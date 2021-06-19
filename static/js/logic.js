@@ -118,3 +118,25 @@ function createMap(earthquakes) {
   L.control.layers(baseMaps, overlayMaps, {
     collapsed: false
   }).addTo(myMap);
+
+    // Query to retrieve the faultline data
+    var faultlinequery = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_plates.json";
+  
+    // Create the faultlines and add them to the faultline layer
+    d3.json(faultlinequery, function(data) {
+      L.geoJSON(data, {
+        style: function() {
+          return {color: "orange", fillOpacity: 0}
+        }
+      }).addTo(faultLine)
+    })
+  
+    // color function to be used when creating the legend
+    function getColor(d) {
+      return d > 5 ? '#ff3333' :
+             d > 4  ? '#ff6633' :
+             d > 3  ? '#ff9933' :
+             d > 2  ? '#ffcc33' :
+             d > 1  ? '#ffff33' :
+                      '#ccff33';
+    }
